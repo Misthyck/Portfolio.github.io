@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-card-bg: rgba(255, 255, 255, 0.05);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0A0A0A;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin: 15px 10rem;
+}
+
+.logo a {
+    display: inline-block;
+    font-size: 25px;
+    text-decoration: none;
+    color: #e50914;
+    transition: transform 0.2s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ;
+}
+
+nav a:hover {
+    color: #e50914;
+    transform: scale(1.30);
+}
+
+nav ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 25px; 
+}
+ 
+#Inicio {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 10rem;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#Inicio h1 {
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+.skills-subtitle {
+    color: #888888;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #e50914;
+}
+
+span {
+    color: #e50914;
+}
+
+.lang-tags {
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+    z-index: 3 !important;
+    position: relative;
+}
+
+.tech-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background-color: var(--color-card-bg);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 3 !important;
+    transition: 0.3s ease;
+}
+
+.tech-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.tech-icon:hover {
+    border-color: rgb(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.12)
+}
+
+.tech-icon[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.92);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 0.25s ease forwards;
+  pointer-events: none;
+  z-index: 10;
+}
