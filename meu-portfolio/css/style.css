@@ -2,6 +2,9 @@
 
 :root {
     --color-card-bg: rgba(255, 255, 255, 0.05);
+    --color-principal: #e50914;
+    --color-secundaria: #57070b;
+    --color-terciaria: #b80912;
 }
 
 *{
@@ -21,14 +24,14 @@ header {
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
-    margin: 15px 10rem;
+    margin: 15px 5rem;
 }
 
 .logo a {
     display: inline-block;
     font-size: 25px;
     text-decoration: none;
-    color: #e50914;
+    color: var(--color-principal);
     transition: transform 0.2s ease;
 }
 
@@ -44,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #e50914;
+    color: var(--color-principal);
     transform: scale(1.30);
 }
 
@@ -58,7 +61,8 @@ nav ul{
 #Inicio {
     display: flex;
     flex-direction: column;
-    padding: 35px 10rem;
+    padding: 35px 5rem;
+    margin-bottom: 15%;
     justify-content: space-between;
     gap: 10px;
 }
@@ -76,11 +80,11 @@ nav ul{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #e50914;
+    border: 3px solid var(--color-principal);
 }
 
 span {
-    color: #e50914;
+    color: var(--color-principal);
 }
 
 .lang-tags {
@@ -132,3 +136,118 @@ span {
   pointer-events: none;
   z-index: 10;
 }
+
+#Projetos{
+    height: 100vh;
+}
+
+.projetosTitle {
+    text-align: right;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-right: 20%;
+}
+
+.projetos-stand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 10rem;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 400px;
+    width: 260px;
+    border: 4px solid white;
+    background-color: var(--color-secundaria);
+    box-shadow: 0px 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.card-foto {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card1 img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    
+    padding: 15px 20px;
+}
+
+.card-content p {
+    color: #AAAA;
+    font-size: 0.80rem;
+}
+
+.card-links {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+}
+
+.card-links img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.card-links a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--color-terciaria);
+    font-style: italic;
+    overflow: hidden;
+}
+
+.card-links a.github-link {
+    display: flex;
+    align-items: center;
+}
+
+.card1:hover {
+    box-shadow: 0 1px 40px var(--color-principal);
+}
+
+.card1 a:hover{
+    color: var(--color-principal);
+    text-decoration: underline;
+}
+
+.card-links a.github-link img {
+    margin: 5px 5px;
+    transition: transform 0.3s ease;
+}
+
+.card-links a.github-link img:hover {
+    transform: scale(1.3);
+}
+
+.card1:hover .card-foto img {
+    transform: scale(1.1);
+}
+
